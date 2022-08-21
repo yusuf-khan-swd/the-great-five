@@ -1,15 +1,20 @@
 
-// Select Messi
-document.getElementById('select-messi').addEventListener('click', function() {
+function selectPlayer(eventId, playerNameId) {
 
-  document.getElementById('select-messi').setAttribute('disabled', true)
+  document.getElementById(eventId).setAttribute('disabled', true)
 
-  const playerName = document.getElementById('messi').innerText;
+  const playerName = document.getElementById(playerNameId).innerText;
   const parentElement = document.getElementById('selected-players-list');
 
   const li = document.createElement('li');
   li.innerText = playerName;
   parentElement.appendChild(li);
+}
+
+// Select Messi
+document.getElementById('select-messi').addEventListener('click', function() {
+  selectPlayer('select-messi', 'messi');
+
 });
 
 // Calculate PlayerExpenses
