@@ -26,7 +26,8 @@
       <div class="container p-3">
         <div class="row row-cols-2">
           <div class="col-6 col-md-3 order-last">
-            <div class="row row-cols-1">
+            <!-- Select Player Section -->
+            <div class="row row-cols-1 mb-5">
               <div class="col">
                 <div class="card h-100">
                   <div class="card-body">
@@ -40,7 +41,58 @@
                 </div>
               </div>
             </div>
+
+            <!-- Budget Section -->
+            <div class="row row-cols-1">
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Budget</h5>
+                    <div class="d-flex justify-content-between">
+                      <div class="mb-1">
+                        <label for="">Per Player</label>
+                      </div>
+                      <div class="mb-2 col-6">
+                        <input type="text" value="1000" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="d-grid mb-4">
+                      <button class="btn btn-primary">Calculate</button>
+                    </div>
+                    <div class="d-flex justify-content-evenly">
+                      <p>Player Expenses</p>
+                      <p>$5000</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div class="mb-1">
+                        <label for="">Manager</label>
+                      </div>
+                      <div class="mb-2 col-6">
+                        <input type="text" value="2000" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div class="mb-1">
+                        <label for="">Coach</label>
+                      </div>
+                      <div class="mb-2 col-6">
+                        <input type="text" value="4000" class="form-control" />
+                      </div>
+                    </div>
+                    <div class="d-grid mb-4">
+                      <button class="btn btn-primary">Calculate Total</button>
+                    </div>
+                    <div class="d-flex justify-content-evenly">
+                      <p>Total</p>
+                      <p>$11000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Player Cards -->
           <div class="col-6 col-md-9">
             <div
               class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4"
