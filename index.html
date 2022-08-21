@@ -25,14 +25,14 @@
     <main>
       <div class="container p-3">
         <div class="row row-cols-2">
-          <div class="col-6 col-md-3 order-last">
+          <div class="col-6 col-md-4 col-lg-3 order-last">
             <!-- Select Player Section -->
             <div class="row row-cols-1 mb-5">
               <div class="col">
                 <div class="card h-100">
                   <div class="card-body">
                     <h5 class="card-title">Selected Five</h5>
-                    <ol>
+                    <ol id="selected-players-list">
                       <li>Lionel Messi</li>
                       <li>Neymar Jr</li>
                       <li>Kylian Mbappé</li>
@@ -53,22 +53,34 @@
                         <label for="">Per Player</label>
                       </div>
                       <div class="mb-2 col-6">
-                        <input type="text" value="1000" class="form-control" />
+                        <input
+                          id="per-player-cost"
+                          type="text"
+                          value="1000"
+                          class="form-control"
+                        />
                       </div>
                     </div>
                     <div class="d-grid mb-4">
-                      <button class="btn btn-primary">Calculate</button>
+                      <button id="calculate" class="btn btn-primary">
+                        Calculate
+                      </button>
                     </div>
                     <div class="d-flex justify-content-evenly">
                       <p>Player Expenses</p>
-                      <p>$5000</p>
+                      <p>$<span id="player-expenses">5000</span></p>
                     </div>
                     <div class="d-flex justify-content-between">
                       <div class="mb-1">
                         <label for="">Manager</label>
                       </div>
                       <div class="mb-2 col-6">
-                        <input type="text" value="2000" class="form-control" />
+                        <input
+                          id="manager-cost"
+                          type="text"
+                          value="2000"
+                          class="form-control"
+                        />
                       </div>
                     </div>
                     <div class="d-flex justify-content-between">
@@ -76,15 +88,22 @@
                         <label for="">Coach</label>
                       </div>
                       <div class="mb-2 col-6">
-                        <input type="text" value="4000" class="form-control" />
+                        <input
+                          id="coach-cost"
+                          type="text"
+                          value="4000"
+                          class="form-control"
+                        />
                       </div>
                     </div>
                     <div class="d-grid mb-4">
-                      <button class="btn btn-primary">Calculate Total</button>
+                      <button id="calculate-total" class="btn btn-primary">
+                        Calculate Total
+                      </button>
                     </div>
                     <div class="d-flex justify-content-evenly">
                       <p>Total</p>
-                      <p>$11000</p>
+                      <p>$<span id="total">11000</span></p>
                     </div>
                   </div>
                 </div>
@@ -93,7 +112,7 @@
           </div>
 
           <!-- Player Cards -->
-          <div class="col-6 col-md-9">
+          <div class="col-6 col-md-8 col-lg-9">
             <div
               class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-4"
             >
@@ -105,14 +124,18 @@
                     alt="..."
                   />
                   <div class="card-body">
-                    <h5 class="card-title text-center">Lionel Messi</h5>
+                    <h5 class="card-title text-center" id="messi">
+                      Lionel Messi
+                    </h5>
                     <div class="d-flex justify-content-around">
                       <p class="card-text text-muted">120 Assist</p>
                       <p class="card-text text-muted">36 Goals</p>
                     </div>
                   </div>
                   <div class="d-grid p-3">
-                    <button class="btn btn-primary">Select</button>
+                    <button class="btn btn-primary" id="select-messi">
+                      Select
+                    </button>
                   </div>
                 </div>
               </div>
