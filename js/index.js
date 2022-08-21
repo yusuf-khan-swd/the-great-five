@@ -11,15 +11,14 @@ function selectPlayer(eventId, playerNameId) {
   parentElement.appendChild(li);
 }
 
-// Select Messi
-document.getElementById('select-messi').addEventListener('click', function() {
-  selectPlayer('select-messi', 'messi');
+function setEvent(eventId, playerName) {
+  document.getElementById(eventId).addEventListener('click', function() {
+    selectPlayer(eventId, playerName);
+  });
+}
 
-});
-
-document.getElementById('select-neymar').addEventListener('click', function() {
-  selectPlayer('select-neymar', 'neymar');
-});
+setEvent('select-messi', 'messi');
+setEvent('select-neymar', 'neymar');
 
 // Calculate PlayerExpenses
 document.getElementById('calculate').addEventListener('click', function() {
