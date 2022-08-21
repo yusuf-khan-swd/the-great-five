@@ -19,7 +19,11 @@ function setEvent(eventId, playerName) {
 
 const players = [
   { eventId: 'select-messi', playerName: 'messi' },
-  {eventId: 'select-neymar', playerName: 'neymar'}
+  {eventId: 'select-neymar', playerName: 'neymar'},
+  {eventId: 'select-Mbappé', playerName: 'Mbappé'},
+  {eventId: 'select-Machado', playerName: 'Machado'},
+  {eventId: 'select-Ramos', playerName: 'Ramos'},
+  {eventId: 'select-Sanches', playerName: 'Sanches'},
 ];
 
 for (let element of players) {
