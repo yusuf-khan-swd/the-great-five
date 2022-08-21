@@ -17,8 +17,15 @@ function setEvent(eventId, playerName) {
   });
 }
 
-setEvent('select-messi', 'messi');
-setEvent('select-neymar', 'neymar');
+const players = [
+  { eventId: 'select-messi', playerName: 'messi' },
+  {eventId: 'select-neymar', playerName: 'neymar'}
+];
+
+for (let element of players) {
+  setEvent(element.eventId, element.playerName);
+}
+
 
 // Calculate PlayerExpenses
 document.getElementById('calculate').addEventListener('click', function() {
