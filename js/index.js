@@ -1,13 +1,19 @@
 
 function selectPlayer(eventId, playerNameId) {
-
-  document.getElementById(eventId).setAttribute('disabled', true)
-
+  
   const playerName = document.getElementById(playerNameId).innerText;
+    
   const parentElement = document.getElementById('selected-players-list');
-
   const li = document.createElement('li');
   li.innerText = playerName;
+  
+  const selectedPlayerList = parentElement.children;
+  if (selectedPlayerList.length > 4) {
+    alert('Your team is full.');
+    return;
+  }
+  
+  document.getElementById(eventId).setAttribute('disabled', true)
   parentElement.appendChild(li);
 }
 
