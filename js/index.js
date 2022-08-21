@@ -17,6 +17,10 @@ document.getElementById('select-messi').addEventListener('click', function() {
 
 });
 
+document.getElementById('select-neymar').addEventListener('click', function() {
+  selectPlayer('select-neymar', 'neymar');
+});
+
 // Calculate PlayerExpenses
 document.getElementById('calculate').addEventListener('click', function() {
   const perPlayerCostField = document.getElementById('per-player-cost');
