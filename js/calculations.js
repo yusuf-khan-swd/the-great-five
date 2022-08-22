@@ -11,7 +11,7 @@ function getInputValue(inputId) {
   const inputValue = parseFloat(inputValueString);
 
   if (isNaN(inputValue) || inputValue < 0) {
-    alert('Please enter a positive number');
+    alert('Please enter a valid input');
     return 0;
   }
 
