@@ -30,6 +30,7 @@ const players = [
   {eventId: 'select-Ramos', playerName: 'Ramos'},
   {eventId: 'select-Sanches', playerName: 'Sanches'},
   {eventId: 'select-ronaldo', playerName: 'ronaldo'},
+  {eventId: 'select-Salah', playerName: 'Salah'},
 ];
 
 for (let element of players) {
