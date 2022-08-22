@@ -1,9 +1,15 @@
 
+function getInputValue(inputId) {
+  const inputField = document.getElementById(inputId);
+  const inputValueString = inputField.value;
+  const inputValue = parseFloat(inputValueString);
+  return inputValue;
+}
+
 // Calculate PlayerExpenses
 document.getElementById('calculate').addEventListener('click', function() {
-  const perPlayerCostField = document.getElementById('per-player-cost');
-  const perPlayerCostString = perPlayerCostField.value;
-  const perPlayerCost = parseFloat(perPlayerCostString);
+  const inputId = 'per-player-cost';
+  const perPlayerCost = getInputValue(inputId);
 
   const selectedPlayerList = document.getElementById('selected-players-list').children;
   const selectedPlayers = selectedPlayerList.length;
