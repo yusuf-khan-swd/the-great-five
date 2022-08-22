@@ -3,6 +3,12 @@ function getInputValue(inputId) {
   const inputField = document.getElementById(inputId);
   const inputValueString = inputField.value;
   const inputValue = parseFloat(inputValueString);
+
+  if (isNaN(inputValue) || inputValue < 0) {
+    alert('Please enter a valid input');
+    return 0;
+  }
+
   return inputValue;
 }
 
