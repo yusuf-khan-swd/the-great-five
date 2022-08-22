@@ -2,10 +2,16 @@
 function getInputValue(inputId) {
   const inputField = document.getElementById(inputId);
   const inputValueString = inputField.value;
+
+  if (isNaN(inputValueString)) {
+    alert('Please enter a valid input');
+    return 0;
+  }
+
   const inputValue = parseFloat(inputValueString);
 
-  if (isNaN(inputValue) || inputValue < 0) {
-    alert('Please enter a valid input');
+  if (inputValue < 0) {
+    alert('Please enter a positive number');
     return 0;
   }
 
