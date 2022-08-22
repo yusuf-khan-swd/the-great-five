@@ -6,16 +6,21 @@ function getInputValue(inputId) {
   return inputValue;
 }
 
+function setElementInnerText(elementId, valueToSet) {
+  const element = document.getElementById(elementId);
+  element.innerText = valueToSet;
+}
+
 // Calculate PlayerExpenses
 document.getElementById('calculate').addEventListener('click', function() {
-  const inputId = 'per-player-cost';
-  const perPlayerCost = getInputValue(inputId);
-
+  const perPlayerCost = getInputValue('per-player-cost');
+  
   const selectedPlayerList = document.getElementById('selected-players-list').children;
   const selectedPlayers = selectedPlayerList.length;
-
+  
   const playerExpenses = perPlayerCost * selectedPlayers;
-  document.getElementById('player-expenses').innerText = playerExpenses;
+  
+  setElementInnerText('player-expenses', playerExpenses)
 });
 
 // Calculate total Cost 
