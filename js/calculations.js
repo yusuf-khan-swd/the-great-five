@@ -34,6 +34,11 @@ document.getElementById('calculate').addEventListener('click', function() {
   
   const selectedPlayerList = document.getElementById('selected-players-list').children;
   const selectedPlayers = selectedPlayerList.length;
+
+  if (selectedPlayers < 1) {
+    alert('Please Select Atleast One Player');
+    return 0;
+  }
   
   const playerExpenses = perPlayerCost * selectedPlayers;  
   setElementInnerText('player-expenses', playerExpenses)
